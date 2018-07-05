@@ -1,0 +1,19 @@
+#====================eureka中心配置====================
+spring:
+  application:
+    name: hello-client
+    
+server:
+  port: 8072
+  
+eureka:
+  client:
+    register-with-eureka: true      #是否注册为服务
+    fetch-registry: true            #是否检索服务
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+    enabled: true
+    
+  instance:
+    hostname: localhost             #主机名
+    
